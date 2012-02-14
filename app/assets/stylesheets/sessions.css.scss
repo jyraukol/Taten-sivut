@@ -1,3 +1,11 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#login_information {
+  width: 250px;
+  -moz-box-shadow: 5px 5px 5px #333;
+  -webkit-box-shadow: 5px 5px 5px #333;
+  -o-box-shadow: 5px 5px 5px #333;
+  box-shadow: 5px 5px 5px #333;
+}

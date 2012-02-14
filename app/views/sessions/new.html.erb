@@ -1,13 +1,16 @@
 <h1>Log in</h1>
 
 <%= form_tag sessions_path do %>
+  <fieldset id="login_information">
+    <legend>Log in</legend>
   <p>
     <%= label_tag :username %><br />
-    <%= text_field_tag :username, params[:username] %>
+    <%= text_field_tag :username, params[:username], :autofocus => true %>
   </p>
   <p>
     <%= label_tag :password %><br />
     <%= password_field_tag :password %>
   </p>
   <p class="button"><%= submit_tag "Log in" %></p>
+</fieldset>
 <% end %>
