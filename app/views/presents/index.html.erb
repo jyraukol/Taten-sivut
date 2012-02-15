@@ -1,5 +1,5 @@
 <h1>Presents</h1>
 
 <% for present in @presents %>
-  <p><%= "%s %s %s " % [present.description, present.reserved, present.reserver] %>
+  <p class="present_line"><%= "%s %s %s " % [present.description, present.reserved, present.reserver] %>
 <% end %>
