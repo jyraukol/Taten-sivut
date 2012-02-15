@@ -1,3 +1,25 @@
 // Place all the styles related to the Present controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.present_line {
+  margin-bottom: 15px;
+  font-size: 34px;
+  padding: 8px;
+  border: 5px solid #00395A;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  width: 400px;
+  background-color: #03507B;
+  color: #FFF;
+}
+
+.present_line:hover {
+  background-color: red;
+  cursor : pointer;
+}
+
+.present_description {
+  margin: 0;
+  padding: 0;
+}

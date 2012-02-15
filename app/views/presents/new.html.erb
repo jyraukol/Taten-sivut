@@ -12,13 +12,17 @@
   </div>
 <% end %>
 <p>
+<%= f.label :name %><br />
+<%= f.text_field :name %>
+</p>
+<p>
 <%= f.label :description %><br />
 <%= f.text_field :description %>
 </p>
 <p>
-<%= f.radio_button(:reserved, true) %>
+<%= radio_button_tag(:reserved, true) %>
 <%= label_tag(:reserved_true, "Reserved") %>
-<%= f.radio_button(:reserved, false) %>
+<%= radio_button_tag(:reserved, false) %>
 <%= label_tag(:reserved_false, "Free") %>
 </p>
 <p>

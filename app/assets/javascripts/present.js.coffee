@@ -3,4 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
  $(document).ready ->
   $(".present_line").click ->
-     alert("Hello world!")
+    if $(this).find(".present_description").is(":hidden")
+      $(this).find(".present_description").slideDown("slow")
+    else
+      $(this).find(".present_description").slideUp("slow")
