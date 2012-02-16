@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120215180332) do
+ActiveRecord::Schema.define(:version => 20120216190632) do
 
   create_table "presents", :force => true do |t|
     t.text     "description"
-    t.boolean  "reserved"
+    t.boolean  "reserved",    :default => false
     t.integer  "reserver"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.string   "name"
   end
 

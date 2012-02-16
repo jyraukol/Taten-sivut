@@ -15,4 +15,14 @@ class PresentsController < ApplicationController
       render "new"
     end
   end
+  
+  def edit 
+    @present = Present.find(params[:id]) 
+  end
+  def reserve_present
+    value = !Present.find(params[:present]).reserved
+    Present.update(params[:present], :reserved => value)
+    redirect_to presents_index_url
+    
+  end
 end

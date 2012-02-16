@@ -1,6 +1,24 @@
 // Place all the styles related to the Present controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+  font-size: 24px;
+  margin: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  margin: 0;
+}
+
+.reserved {
+  text-decoration: line-through;
+}
 .present_line {
   margin-bottom: 15px;
   font-size: 34px;

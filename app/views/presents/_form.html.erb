@@ -1,0 +1,31 @@
+<%= form_for @present do |f| %>
+  <% if @present.errors.any? %>
+  <div class="error_messages">
+    <h2>Form is invalid</h2>
+    <ul>
+      <% for message in @present.errrors.full_messages %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<p>
+<%= f.label :name %><br />
+<%= f.text_field :name %>
+</p>
+<p>
+<%= f.label :description %><br />
+<%= f.text_field :description %>
+</p>
+<p>
+<%= f.radio_button(:reserved, true) %>
+<%= f.label(:reserved_true, "Reserved") %>
+<%= f.radio_button(:reserved, false) %>
+<%= f.label(:reserved_false, "Free") %>
+</p>
+<p>
+  <%= f.label :reserver %><br />
+  <%= f.text_field :reserver %>
+</p>
+<p class="button"><%= f.submit %></p>
+<% end %>

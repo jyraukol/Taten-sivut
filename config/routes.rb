@@ -1,6 +1,6 @@
 Auth::Application.routes.draw do
   get "presents/index" => "presents#index"
-
+  get "reserve" => "presents#reserve_present", :as => "reserve"
   get "presents/new"
 
   get "log_in" => "sessions#new", :as => "log_in"

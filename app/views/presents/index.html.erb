@@ -1,9 +1,14 @@
 <h1>Presents</h1>
 
-<% for present in @presents %>
-  <div class="present_line"><%= "%s %s %s " % [present.name, present.reserved, present.reserver] %>
-    <% if present.description.empty? == false %>
-      <p class="present_description" style="display:none;"><%= present.description %></p>
-    <% end %>
-  </div>
+<ul>
+  <% for present in @presents %>
+    <li
+    <% if present.reserved == true %>
+      class="reserved"
+  <% else %>
+  <% end %>  
+  >
+  <%= link_to present.name, reserve_path(:present => present.id) %>
+  </li>
 <% end %>
+</ul>
