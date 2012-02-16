@@ -19,6 +19,13 @@ class PresentsController < ApplicationController
   def edit 
     @present = Present.find(params[:id]) 
   end
+
+  def update 
+    @present = Present.find(params[:id])
+    if @present.update_attributes(params[:present])
+      redirect_to presents_index_path
+    end
+  end
   def reserve_present
     value = !Present.find(params[:present]).reserved
     Present.update(params[:present], :reserved => value)
