@@ -11,4 +11,12 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+
+  def attend
+    if check_login()
+      @user = User.find(session[:user_id])
+    else
+      redirect_to root_url, :notice => "Log in first"
+    end
+  end
 end
