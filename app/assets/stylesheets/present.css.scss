@@ -19,17 +19,16 @@ ul li a {
 .reserved {
   text-decoration: line-through;
 }
-.present_line {
-  margin-bottom: 15px;
-  font-size: 34px;
-  padding: 8px;
-  border: 5px solid #00395A;
-  border-radius: 15px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  width: 400px;
-  background-color: #03507B;
-  color: #FFF;
+
+li + ul {
+  display: inline;
+  background-color: red;
+}
+
+li + ul a {
+  color: blue;
+  font-size: 16px;
+  margin-left: 20px;
 }
 
 .present_line:hover {

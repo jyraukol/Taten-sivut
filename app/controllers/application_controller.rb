@@ -11,9 +11,7 @@ class ApplicationController < ActionController::Base
 
   def check_login
     if current_user == nil 
-      return false
-    else
-      return true
+      redirect_to log_in_url
     end
   end
 end

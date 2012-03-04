@@ -8,7 +8,9 @@
   <% else %>
   <% end %>  
   >
-  <%= link_to present.name, reserve_path(:present => present.id) %>
-  </li>
+  <%= link_to present.name, reserve_path(:present => present.id) %></li>
+  <ul> <li><%= link_to "Edit", edit_present_path(present) %> 
+     <a href="link">Destroy </a></li>
+  </ul>
 <% end %>
 </ul>
