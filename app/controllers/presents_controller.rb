@@ -1,4 +1,6 @@
 class PresentsController < ApplicationController
+  before_filter :check_login
+
   def index
     @presents = Present.all
   end
