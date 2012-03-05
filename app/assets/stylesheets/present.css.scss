@@ -1,42 +1,33 @@
 // Place all the styles related to the Present controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-ul {
-  padding: 0;
-}
 
-ul li {
-  list-style-type: none;
-  font-size: 24px;
-  margin: 0;
+#presents_table {
+  border: 1px solid #DFDFDF;
+  background-color: #F9F9F9;
+  width: 100%;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-family: Arial,"Bitstream Vera Sans",Helvetica,Verdana,sans-serif;
+  color: #333;
 }
-
-ul li a {
-  text-decoration: none;
-  margin: 0;
+ td,  th {
+  border-top-color: white;
+  border-bottom: 1px solid #DFDFDF;
+  color: #555;
 }
-
-.reserved {
-  text-decoration: line-through;
+ th {
+  text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
+  font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+  font-weight: normal;
+  padding: 7px 7px 8px;
+  text-align: left;
+  line-height: 1.3em;
+  font-size: 14px;
 }
-
-li + ul {
-  display: inline;
-  background-color: red;
-}
-
-li + ul a {
-  color: blue;
-  font-size: 16px;
-  margin-left: 20px;
-}
-
-.present_line:hover {
-  background-color: red;
-  cursor : pointer;
-}
-
-.present_description {
-  margin: 0;
-  padding: 0;
+ td {
+  font-size: 12px;
+  padding: 4px 7px 2px;
+  vertical-align: top;
 }

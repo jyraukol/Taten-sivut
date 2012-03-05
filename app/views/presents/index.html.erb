@@ -1,16 +1,32 @@
 <h1>Presents</h1>
 
-<ul>
+<table id="presents_table">
+  <thead>
+    <th>Nimi</th>
+    <th>Kuvaus</th>
+    <th>Varattu</th>
+    <th>Varaaja</th>
+    <th></th>
+    <th />
+  </thead>
+  <tbody>
   <% for present in @presents %>
-    <li
+    <tr>
+      <td><%= present.name %></td>
+      <td><%= present.description %></td> 
+      <td> 
     <% if present.reserved == true %>
-      class="reserved"
-  <% else %>
-  <% end %>  
-  >
-  <%= link_to present.name, reserve_path(:present => present.id) %></li>
-  <ul> <li><%= link_to "Edit", edit_present_path(present) %> 
-     <a href="link">Destroy </a></li>
-  </ul>
+      True
+    <% else %>
+      False
+    <% end %>
+  </td> 
+  <td> <%= present.reserver %> </td>
+      <td><%= link_to 'Reserve', reserve_path(:present => present.id) %></td>
+      <td><%= link_to "Edit", edit_present_path(present) %> </td>
+      <td><a href="link">Destroy </a></td>
+    </tr>
 <% end %>
-</ul>
+  </tbody>
+</table>
+
