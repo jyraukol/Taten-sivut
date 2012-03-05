@@ -1,5 +1,5 @@
 class PresentsController < ApplicationController
-  before_filter :check_login
+  before_filter :check_login, :current_user
 
   def index
     @presents = Present.all
@@ -32,8 +32,8 @@ class PresentsController < ApplicationController
   def reserve_present
     value = !Present.find(params[:present]).reserved
     if value == true
-      Present.update(params[:present], :reserved => value, :reserver => current_user)
-    else
+      Present.update(params[:present], :reserved => value, :reserver => current_user.id)
+    elsif Present.find(params[:present]).reserver == current_user.id
       Present.update(params[:present], :reserved => value, :reserver => nil)
     end
     redirect_to presents_index_url  

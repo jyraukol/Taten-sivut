@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120216190632) do
+ActiveRecord::Schema.define(:version => 20120305210046) do
 
   create_table "presents", :force => true do |t|
     t.text     "description"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20120216190632) do
     t.string   "password_salt"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.boolean  "admin"
   end
 
 end
