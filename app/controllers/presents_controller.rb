@@ -28,10 +28,15 @@ class PresentsController < ApplicationController
       redirect_to presents_index_path
     end
   end
+
   def reserve_present
     value = !Present.find(params[:present]).reserved
-    Present.update(params[:present], :reserved => value)
-    redirect_to presents_index_url
-    
+    if value == true
+      Present.update(params[:present], :reserved => value, :reserver => current_user)
+    else
+      Present.update(params[:present], :reserved => value, :reserver => nil)
+    end
+    redirect_to presents_index_url  
   end
+
 end
