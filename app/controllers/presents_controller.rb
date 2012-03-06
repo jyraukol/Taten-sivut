@@ -1,8 +1,8 @@
 class PresentsController < ApplicationController
-  before_filter :check_login, :current_user
+  before_filter :check_login
 
   def index
-    @presents = Present.all
+    @presents = Present.order("name").all
   end
 
   def new
