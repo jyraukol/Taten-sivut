@@ -1,13 +1,14 @@
 <h1>Presents</h1>
 
+<% if current_user.admin == true %>
+  <%= link_to 'Hallinnoi lahjoja', manage_presents_path %>
+<% end %>
 <table id="presents_table">
   <thead>
     <th>Nimi</th>
     <th>Kuvaus</th>
     <th>Varattu</th>
-    <th>Varaaja</th>
-    <th />
-    <th />
+    <th></th>
   </thead>
   <tbody>
   <% for present in @presents %>
@@ -21,19 +22,12 @@
       False
     <% end %>
   </td> 
-  <% if @current_user.admin == true %>
-    <td> <% if present.reserver != nil %>
-        <%= User.find(present.reserver).username %>
-      <% end %>
-    </td>
-      <td><%= link_to 'Reserve', reserve_path(:present => present.id) %></td>
-      <td><%= link_to "Edit", edit_present_path(present) %> </td>
-      <td><a href="link">Destroy </a></td>
-    <% end %>
+  <td>
+<%= link_to  'Varaa', reserve_path(:present => present.id) %>
+</td>
     </tr>
 <% end %>
   </tbody>
 </table>
 
-<%= link_to "Lisää uusi lahja", new_present_path %>
 

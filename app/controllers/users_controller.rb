@@ -15,6 +15,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = current_user
+  end
   def attend
     if check_login()
       @user = User.find(session[:user_id])

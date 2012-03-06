@@ -39,4 +39,8 @@ class PresentsController < ApplicationController
     redirect_to presents_index_url  
   end
 
+  def manage
+    @presents = Present.all
+  end
+
 end
