@@ -1,0 +1,16 @@
+<h1>Luo uusi vieras</h1>
+
+<%= form_for @guest do |f| %>
+  <fieldset id="guests">
+    <legend>Log in</legend>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :autofocus => true %>
+  </p>
+  <p>
+    <%= f.label :attending %><br />
+    <%= f.password_field :attending %>
+  </p>
+  <p class="button"><%= f.submit "Luo" %></p>
+</fieldset>
+<% end %>

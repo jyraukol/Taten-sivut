@@ -22,7 +22,10 @@
     <% end %>
   </td> 
   <% if @current_user.admin == true %>
-  <td> <%= User.find(present.reserver).username %> </td>
+    <td> <% if present.reserver != nil %>
+        <%= User.find(present.reserver).username %>
+      <% end %>
+    </td>
       <td><%= link_to 'Reserve', reserve_path(:present => present.id) %></td>
       <td><%= link_to "Edit", edit_present_path(present) %> </td>
       <td><a href="link">Destroy </a></td>

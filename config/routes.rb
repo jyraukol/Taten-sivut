@@ -12,5 +12,6 @@ Auth::Application.routes.draw do
   resources :users
   resources :sessions
   resources :presents
+  resources :guests
 
 end
