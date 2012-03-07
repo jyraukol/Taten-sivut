@@ -15,13 +15,18 @@
       <td><%= present.description %></td> 
       <td> 
     <% if present.reserved == true %>
-      True
+      Varattu
     <% else %>
-      False
+      Vapaa
     <% end %>
   </td> 
   <td>
-<%= link_to  'Varaa', reserve_path(:present => present.id) %>
+    <% if present.reserved == false %>
+      <%= link_to 'Varaa', reserve_path(:present => present.id) %>
+    <% end %>
+  <% if current_user.id == present.reserver %>
+    <%= link_to  'Peruuta varaus', reserve_path(:present => present.id) %>
+  <% end %>
 </td>
     </tr>
 <% end %>
