@@ -1,7 +1,5 @@
-<h1>Presents</h1>
-
 <% if current_user.admin == true %>
-  <%= link_to 'Hallinnoi lahjoja', manage_presents_path %>
+  <%= link_to image_tag('pencil_icon.png'), manage_presents_path, :class => 'manageImage' %>
 <% end %>
 <table id="presents_table">
   <thead>

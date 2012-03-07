@@ -12,6 +12,7 @@
   color: #333;
   margin-bottom: 1em;
 }
+
  td,  th {
   border-top-color: white;
   border-bottom: 1px solid #DFDFDF;
@@ -30,4 +31,10 @@
   font-size: 12px;
   padding: 4px 7px 2px;
   vertical-align: top;
+}
+
+.manageImage {
+  margin: 0;
+  position: relative;
+  left: 95%;
 }
