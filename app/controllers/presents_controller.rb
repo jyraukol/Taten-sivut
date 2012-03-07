@@ -12,7 +12,7 @@ class PresentsController < ApplicationController
   def create
     @present = Present.new(params[:present])
     if @present.save
-      redirect_to presents_index_url 
+      redirect_to manage_presents_path 
     else
       render "new"
     end
@@ -20,6 +20,12 @@ class PresentsController < ApplicationController
   
   def edit 
     @present = Present.find(params[:id]) 
+  end
+
+  def destroy 
+    @present = Present.find(params[:id])
+    @present.destroy
+    redirect_to manage_presents_path
   end
 
   def update 

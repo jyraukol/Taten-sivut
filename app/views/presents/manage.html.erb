@@ -22,7 +22,7 @@
       <td>
         <%= link_to "Muokkaa", edit_present_path(present) %> </td>
       <td>
-        <a href="link">Poista</a>
+        <%= link_to "Poista", present, :method => :delete %>
       </td>
     </tr>
   <% end %>
