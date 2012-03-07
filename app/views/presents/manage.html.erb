@@ -1,6 +1,10 @@
 <h2>Lahjojen hallinnointi</h2>
 
-<%= link_to "Lisää uusi", new_present_path %>
+<ul id="manageFunctions">
+  <li><%= link_to "Lisää uusi", new_present_path %></li>
+  <li><%= link_to 'Palaa', presents_index_path, :class => "back_link" %></li>
+</ul>
+
 <table id="presents_table">
   <thead>
     <th>Lahja</th>
@@ -28,4 +32,4 @@
   <% end %>
 </tbody>
 </table>
- 
+

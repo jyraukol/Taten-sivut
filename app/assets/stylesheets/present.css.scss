@@ -34,7 +34,19 @@
 }
 
 .manageImage {
-  margin: 0;
-  position: relative;
-  left: 95%;
+  margin-left: 95%;
 }
+
+#manageFunctions {
+  margin-left: 0;
+  padding-left: 0;
+}
+#manageFunctions li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 2em;
+}
+
+
+
+
