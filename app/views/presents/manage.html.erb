@@ -1,12 +1,31 @@
-<%= link_to "Lisää uusi lahja", new_present_path %>
+<h2>Lahjojen hallinnointi</h2>
 
-<% for present in @presents %>
-  <p>Nimi: <%= present.name %> 
-  <% if present.reserver != nil %>
-    Varaaja: <%= User.find(present.reserver).username %>
-  <% end %> 
-      <%= link_to "Edit", edit_present_path(present) %> 
-      <a href="link">Destroy </a>
- </p>
-<% end %>
+<%= link_to "Lisää uusi", new_present_path %>
+<table id="presents_table">
+  <thead>
+    <th>Lahja</th>
+    <th>Varaaja</th>
+    <th></th>
+    <th />
+  </thead>
+  <tbody>
+ 
+    <% for present in @presents %>
+      <tr>
+
+        <td> <%= present.name %> </td>
+        <td>
+          <% if present.reserver != nil %>
+            <%= User.find(present.reserver).username %>
+          <% end %> 
+        </td>
+      <td>
+        <%= link_to "Muokkaa", edit_present_path(present) %> </td>
+      <td>
+        <a href="link">Poista</a>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
  
