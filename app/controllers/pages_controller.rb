@@ -4,5 +4,8 @@ class PagesController < ApplicationController
   def index 
   end
 
+  def kirkko
+  end
+
   
 end
