@@ -1,9 +1,13 @@
-<h1>Attend</h1>
-
+<h1>Ilmoittautuminen</h1>
+<p>
+Toivomme, että teette ilmoittautumisen näiden sivujen kautta 15.7.2012
+mennessä.  Tarvittaessa saatte lisätietoa sulhaselta puhelinnumerosta 
+040 7608 233.
+</p>
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
-      <h2>Form is invalid</h2>
+      <h2>Form is valid</h2>
       <ul>
         <% for message in @user.errors.full_messages %>
           <li><%= message %></li>

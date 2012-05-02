@@ -1,0 +1,23 @@
+<h2>Vieraat</h2>
+
+<% for user in @users %>
+  <h3>  <%= user.username %> </h3>
+  <table id="user_table">
+    <thead>
+      <th>Vieras</th>
+      <th>Vahvistanut osallistumisensa</th>
+    </thead>
+    <tbody>
+      <% for guest in user.guests %>
+        <tr>
+          <td>
+            <%= guest.name %>
+          </td>
+          <td>
+          </td>
+        </tr>
+       <% end %>
+     </tbody>
+   </table>
+  <br />
+<% end %>

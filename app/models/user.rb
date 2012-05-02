@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
 
   has_many :presents
+  has_many :guests
 
   def self.authenticate(username, password)
     user = find_by_username(username)

@@ -46,6 +46,7 @@ class PresentsController < ApplicationController
   end
 
   def manage
+    check_admin
     @presents = Present.all
   end
 

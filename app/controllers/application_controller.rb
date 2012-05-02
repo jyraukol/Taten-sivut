@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
   helper_method :check_login
+  helper_method :check_admin
+
   private
 
   def current_user
@@ -15,4 +17,11 @@ class ApplicationController < ActionController::Base
       redirect_to log_in_url
     end
   end
+
+  def check_admin
+    if current_user.admin != true
+      redirect_to root_url
+    end
+  end
+
 end

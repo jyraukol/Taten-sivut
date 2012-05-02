@@ -1,1 +1,5 @@
 <p><%= @user.username %></p>
+<% for guest in @user.guests %>
+  <%= guest.name %>
+<% end %>
+

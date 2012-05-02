@@ -7,6 +7,11 @@ class UsersController < ApplicationController
   end
   
   def index
+    @users = User.order(:username)
+  end
+  
+  def edit
+    @user = User.find(params[:id])
   end
 
   def create 
@@ -21,11 +26,8 @@ class UsersController < ApplicationController
   def show
     @user = current_user
   end
+
   def attend
-    if check_login()
       @user = User.find(session[:user_id])
-    else
-      redirect_to root_url, :notice => "Log in first"
-    end
   end
 end
